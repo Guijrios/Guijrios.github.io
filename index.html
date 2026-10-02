@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mim - Guilherme Jesus</title>
+    <title>Guilherme Jesus - Portfólio</title>
     <style>
         body {
             background-color: #0d1117;
-            color: #f0f6fc;
+            color: #c9d1d9;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 40px 20px;
@@ -18,7 +18,7 @@
 
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 850px;
             display: flex;
             flex-direction: column;
             gap: 24px;
@@ -28,72 +28,118 @@
             background-color: #161b22;
             border: 1px solid #30363d;
             border-radius: 12px;
-            padding: 30px;
+            padding: 32px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         /* Seção Sobre mim */
         .header-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
             color: #ffffff;
+        }
+
+        .location-info {
+            text-align: center;
+            color: #8b949e;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
         }
 
         .about-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            gap: 24px;
         }
 
         .about-text {
             flex: 1;
-            line-height: 1.6;
+            line-height: 1.7;
+            color: #e6edf3;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #30363d;
         }
 
-        /* Seção Interesses */
-        .card-light {
-            background-color: #f6f8fa;
-            color: #24292f;
-        }
-
         h2 {
             margin-top: 0;
-            margin-bottom: 16px;
-        }
-
-        ul {
-            padding-left: 20px;
-            margin: 0;
-            line-height: 1.8;
-        }
-
-        /* Seção Projetos e Links */
-        .btn {
-            display: inline-block;
-            background-color: #238636;
+            margin-bottom: 20px;
             color: #ffffff;
-            padding: 10px 18px;
+            border-bottom: 1px solid #21262d;
+            padding-bottom: 8px;
+        }
+
+        /* Lista de Interesses */
+        .interests-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .interests-list li {
+            background-color: #21262d;
+            padding: 10px 14px;
             border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.2s;
+            font-weight: 500;
+            color: #58a6ff;
+            border: 1px solid #30363d;
         }
 
-        .btn:hover {
-            background-color: #2ea043;
+        /* Seção de Projetos */
+        .project-item {
+            margin-bottom: 30px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #21262d;
         }
 
-        @media (max-width: 600px) {
+        .project-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            color: #58a6ff;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .tag {
+            background-color: #1f242c;
+            color: #a5d6ff;
+            border: 1px solid #388bfd33;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+
+        .project-description {
+            line-height: 1.6;
+            color: #8b949e;
+            margin: 0;
+        }
+
+        @media (max-width: 650px) {
             .about-content {
                 flex-direction: column-reverse;
                 text-align: center;
@@ -105,39 +151,85 @@
 
     <div class="container">
         
-        <h1 class="header-title">Sobre mim</h1>
+        <!-- Cabeçalho -->
+        <div>
+            <h1 class="header-title">Guilherme Jesus</h1>
+            <div class="location-info">Ouro Preto, MG · UFOP</div>
+        </div>
 
-        <!-- Card de Apresentação -->
+        <!-- Card de Apresentação / Sobre mim -->
         <section class="card">
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Meu nome é Guilherme Jesus</h3>
+                    <p style="margin-top: 0;"><strong>Estudante de graduação em Ciência da Computação</strong></p>
                     <p>
-                        Estudante de Ciência da Computação na Universidade Federal de Ouro Preto (UFOP). 
-                        Tenho interesse nas áreas de Análise de Dados, Algoritmos, Pesquisa Operacional e Otimização.
+                        Em busca de oportunidades em Pesquisa Operacional, Otimização, Análise de Dados, Engenharia de Software e Desenvolvimento Web. Foco na resolução de problemas complexos, modelagem de algoritmos e otimização de sistemas, com experiência prática no desenvolvimento de aplicações full-stack em Python, TypeScript/React, sistemas distribuídos e integração de bancos de dados.
                     </p>
                 </div>
                 <img src="https://github.com/Guijrios.png" alt="Foto de Guilherme Jesus" class="profile-img">
             </div>
         </section>
 
-        <!-- Card de Interesses -->
-        <section class="card card-light">
-            <h2>Meus interesses</h2>
-            <ul>
-                <li>Fofocar</li>
-                <li>Rocks</li>
-                <li>Jogos</li>
+        <!-- Card de Interesses Acadêmicos e Profissionais -->
+        <section class="card">
+            <h2>Áreas de Interesse</h2>
+            <ul class="interests-list">
+                <li>🎯 Pesquisa Operacional & Otimização</li>
+                <li>🧬 Algoritmos e Otimização Combinatória</li>
+                <li>🌐 Sistemas Distribuídos</li>
+                <li>📊 Análise e Manipulação de Dados</li>
+                <li>🛠️ Engenharia de Software & Web</li>
             </ul>
         </section>
 
-        <!-- Card de Projetos Compartilhados -->
+        <!-- Card de Projetos -->
         <section class="card">
             <h2>Projetos em Destaque</h2>
-            <p>Confira também os projetos e a página desenvolvida em parceria:</p>
-            <a href="https://anapaulatadim.github.io/AnaPaula.github.io/" target="_blank" class="btn">
-                Ver Projetos / Página da Ana Paula
-            </a>
+
+            <!-- Projeto 1 -->
+            <div class="project-item">
+                <h3 class="project-title">🌿 Classificação Few-Shot de Doenças em Plantas via Fusão de Características Global-Local</h3>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">Jupyter</span>
+                    <span class="tag">Visão Computacional</span>
+                </div>
+                <p class="project-description">
+                    Este projeto implementa uma abordagem de Few-Shot Learning (FSL) para classificação de doenças em folhas de plantas, baseada na fusão de características globais e locais com mecanismo de autoatenção. A proposta é investigar como um modelo pode realizar a classificação de diferentes doenças utilizando apenas uma pequena quantidade de imagens de referência, reduzindo a necessidade de grandes conjuntos de dados específicos para cada nova classe.
+                </p>
+            </div>
+
+            <!-- Projeto 2 -->
+            <div class="project-item">
+                <h3 class="project-title">🧩 Resolução do Nonograma usando Algoritmos de IA</h3>
+                <div class="tags">
+                    <span class="tag">IA</span>
+                    <span class="tag">Backtracking</span>
+                    <span class="tag">Algoritmo Genético</span>
+                    <span class="tag">Modelo Híbrido</span>
+                </div>
+                <p class="project-description">
+                    Este projeto apresenta a implementação de um solucionador de Nonogramas, um jogo de lógica em que o objetivo é preencher uma malha de acordo com sequências numéricas fornecidas para cada linha e coluna. Essas sequências indicam a quantidade e a ordem dos blocos consecutivos de células que devem ser preenchidos. O objetivo foi aplicar diferentes estratégias de busca e otimização para resolver o problema de forma automatizada.
+                </p>
+            </div>
+
+            <!-- Projeto 3: AgroLinq -->
+            <div class="project-item">
+                <h3 class="project-title">🌱 AgroLinq — Conectando a Agricultura Local e Sustentável</h3>
+                <div class="tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">React</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Tailwind CSS</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">Engenharia de Software</span>
+                </div>
+                <p class="project-description">
+                    Desenvolvido na disciplina de Engenharia de Software II, o AgroLinq é uma plataforma web projetada para conectar diretamente pequenos produtores rurais a restaurantes e consumidores finais. A solução visa aproximar a cadeia de abastecimento local, alinhando-se aos Objetivos de Desenvolvimento Sustentável (ODS 2, 12 e 13) ao promover o consumo responsável e fortalecer a agricultura sustentável com cadastros centralizados e autenticação segura.
+                </p>
+            </div>
+
         </section>
 
     </div>
