@@ -5,147 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guilherme Jesus - Portfólio</title>
     <style>
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    body {
+        /* Fundo principal em tom verde bem escuro */
+        background-color: #081c15;
+        color: #d8f3dc;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .container {
-            width: 100%;
-            max-width: 850px;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
+    .container {
+        width: 100%;
+        max-width: 850px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
 
-        .card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
+    .card {
+        /* Cards em verde floresta escuro */
+        background-color: #1b4332;
+        border: 1px solid #2d6a4f;
+        border-radius: 12px;
+        padding: 32px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
 
-        /* Seção Sobre mim */
-        .header-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
+    /* Seção Sobre mim */
+    .header-title {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
 
-        .location-info {
-            text-align: center;
-            color: #8b949e;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-        }
+    .location-info {
+        text-align: center;
+        color: #b7e4c7;
+        margin-bottom: 25px;
+        font-size: 0.95rem;
+    }
 
+    .about-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    .about-text {
+        flex: 1;
+        line-height: 1.7;
+        color: #e8f5e9;
+    }
+
+    .profile-img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #52b788;
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #ffffff;
+        border-bottom: 1px solid #2d6a4f;
+        padding-bottom: 8px;
+    }
+
+    /* Lista de Interesses */
+    .interests-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .interests-list li {
+        background-color: #081c15;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-weight: 500;
+        color: #74c69d;
+        border: 1px solid #2d6a4f;
+    }
+
+    /* Seção de Projetos */
+    .project-item {
+        margin-bottom: 30px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #2d6a4f;
+    }
+
+    .project-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+        color: #95d5b2;
+        margin: 0 0 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .tag {
+        background-color: #081c15;
+        color: #b7e4c7;
+        border: 1px solid #52b788;
+        font-size: 0.8rem;
+        padding: 4px 10px;
+        border-radius: 12px;
+    }
+
+    .project-description {
+        line-height: 1.6;
+        color: #d8f3dc;
+        margin: 0;
+    }
+
+    @media (max-width: 650px) {
         .about-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
+            flex-direction: column-reverse;
+            text-align: center;
         }
-
-        .about-text {
-            flex: 1;
-            line-height: 1.7;
-            color: #e6edf3;
-        }
-
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #30363d;
-        }
-
-        h2 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            color: #ffffff;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 8px;
-        }
-
-        /* Lista de Interesses */
-        .interests-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .interests-list li {
-            background-color: #21262d;
-            padding: 10px 14px;
-            border-radius: 6px;
-            font-weight: 500;
-            color: #58a6ff;
-            border: 1px solid #30363d;
-        }
-
-        /* Seção de Projetos */
-        .project-item {
-            margin-bottom: 30px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #21262d;
-        }
-
-        .project-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            color: #58a6ff;
-            margin: 0 0 10px 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 14px;
-        }
-
-        .tag {
-            background-color: #1f242c;
-            color: #a5d6ff;
-            border: 1px solid #388bfd33;
-            font-size: 0.8rem;
-            padding: 4px 10px;
-            border-radius: 12px;
-        }
-
-        .project-description {
-            line-height: 1.6;
-            color: #8b949e;
-            margin: 0;
-        }
-
-        @media (max-width: 650px) {
-            .about-content {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
@@ -174,11 +176,11 @@
         <section class="card">
             <h2>Áreas de Interesse</h2>
             <ul class="interests-list">
-                <li>🎯 Pesquisa Operacional & Otimização</li>
-                <li>🧬 Algoritmos e Otimização Combinatória</li>
-                <li>🌐 Sistemas Distribuídos</li>
-                <li>📊 Análise e Manipulação de Dados</li>
-                <li>🛠️ Engenharia de Software & Web</li>
+                <li> Filmes</li>
+                <li> Corrida</li>
+                <li> Musicas</li>
+                <li> Bares</li>
+                <li> Cafes superfaturados</li>
             </ul>
         </section>
 
@@ -188,7 +190,7 @@
 
             <!-- Projeto 1 -->
             <div class="project-item">
-                <h3 class="project-title">🌿 Classificação Few-Shot de Doenças em Plantas via Fusão de Características Global-Local</h3>
+                <h3 class="project-title"> Classificação Few-Shot de Doenças em Plantas via Fusão de Características Global-Local</h3>
                 <div class="tags">
                     <span class="tag">Python</span>
                     <span class="tag">PyTorch</span>
@@ -202,7 +204,7 @@
 
             <!-- Projeto 2 -->
             <div class="project-item">
-                <h3 class="project-title">🧩 Resolução do Nonograma usando Algoritmos de IA</h3>
+                <h3 class="project-title"> Resolução do Nonograma usando Algoritmos de IA</h3>
                 <div class="tags">
                     <span class="tag">IA</span>
                     <span class="tag">Backtracking</span>
@@ -216,7 +218,7 @@
 
             <!-- Projeto 3: AgroLinq -->
             <div class="project-item">
-                <h3 class="project-title">🌱 AgroLinq — Conectando a Agricultura Local e Sustentável</h3>
+                <h3 class="project-title"> AgroLinq — Conectando a Agricultura Local e Sustentável</h3>
                 <div class="tags">
                     <span class="tag">Next.js</span>
                     <span class="tag">React</span>
