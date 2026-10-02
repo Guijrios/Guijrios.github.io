@@ -141,6 +141,29 @@
         margin: 0;
     }
 
+    /* Seção de Redes Sociais */
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .social-btn {
+        background-color: #081c15;
+        color: #74c69d;
+        border: 1px solid #2d6a4f;
+        padding: 10px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+    .social-btn:hover {
+        background-color: #2d6a4f;
+        color: #ffffff;
+    }
+
     @media (max-width: 650px) {
         .about-content {
             flex-direction: column-reverse;
@@ -172,15 +195,15 @@
             </div>
         </section>
 
-        <!-- Card de Interesses Acadêmicos e Profissionais -->
+        <!-- Card de Interesses -->
         <section class="card">
             <h2>Áreas de Interesse</h2>
             <ul class="interests-list">
-                <li> Filmes</li>
-                <li> Corrida</li>
-                <li> Musicas</li>
-                <li> Bares</li>
-                <li> Cafes superfaturados</li>
+                <li>🎬 Filmes</li>
+                <li>🏃 Corrida</li>
+                <li>🎵 Músicas</li>
+                <li>🍻 Bares</li>
+                <li>☕ Cafés superfaturados</li>
             </ul>
         </section>
 
@@ -190,7 +213,7 @@
 
             <!-- Projeto 1 -->
             <div class="project-item">
-                <h3 class="project-title"> Classificação Few-Shot de Doenças em Plantas via Fusão de Características Global-Local</h3>
+                <h3 class="project-title">🌿 Classificação Few-Shot de Doenças em Plantas via Fusão de Características Global-Local</h3>
                 <div class="tags">
                     <span class="tag">Python</span>
                     <span class="tag">PyTorch</span>
@@ -204,7 +227,7 @@
 
             <!-- Projeto 2 -->
             <div class="project-item">
-                <h3 class="project-title"> Resolução do Nonograma usando Algoritmos de IA</h3>
+                <h3 class="project-title">🧩 Resolução do Nonograma usando Algoritmos de IA</h3>
                 <div class="tags">
                     <span class="tag">IA</span>
                     <span class="tag">Backtracking</span>
@@ -218,7 +241,7 @@
 
             <!-- Projeto 3: AgroLinq -->
             <div class="project-item">
-                <h3 class="project-title"> AgroLinq — Conectando a Agricultura Local e Sustentável</h3>
+                <h3 class="project-title">🌱 AgroLinq — Conectando a Agricultura Local e Sustentável</h3>
                 <div class="tags">
                     <span class="tag">Next.js</span>
                     <span class="tag">React</span>
@@ -232,6 +255,22 @@
                 </p>
             </div>
 
+        </section>
+
+        <!-- Card de Redes Sociais / Contatos -->
+        <section class="card">
+            <h2>Conecte-se comigo</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/SEU_USUARIO" target="_blank" class="social-btn">
+                    LinkedIn
+                </a>
+                <a href="https://www.instagram.com/SEU_USUARIO" target="_blank" class="social-btn">
+                    Instagram
+                </a>
+                <a href="https://github.com/Guijrios" target="_blank" class="social-btn">
+                    GitHub
+                </a>
+            </div>
         </section>
 
     </div>
